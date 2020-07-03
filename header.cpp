@@ -52,7 +52,7 @@ return this->content_length;
 }
 char * getHeader()
 {
-sprintf(this->header,"HTTP/%s %s %s\nContent-Type: %s\nContent-Length: %s\r\n",headerVersion,statusCode,statusMessage,content_type,content_length);
+sprintf(this->header,"HTTP/%s %s %s\r\nContent-Type: %s\r\nContent-Length: %s\r\n\r\n",headerVersion,statusCode,statusMessage,content_type,content_length);
 
 return this->header;
 }

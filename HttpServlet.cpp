@@ -31,14 +31,10 @@ int clientSocketDescriptor;
 int clientSocketPortNumber;
 struct in_addr clientIPAddress;
 char *clientIP;
-HttpServer()
-{
-
-}
 
 
 public:
-HttpServer * static getInstane(char *arg)
+HttpServer(char *arg)
 {
 serverSocketDescriptor=socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
 if(serverSocketDescriptor<0)
@@ -62,7 +58,6 @@ printf("\n");
 
 return;
 }
-return this;
 }
 void listenMode()
 {

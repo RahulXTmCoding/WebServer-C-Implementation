@@ -1,13 +1,12 @@
 #include<stdio.h>
 #include <string>
-#include "httpServlet.cpp"
+#include "HttpServlet.cpp"
 #include "HttpRequestProcessor.cpp"
 #include <stdexcept>
 using namespace std;
 int main(int no,char *arg[])
 {
-HttpServer *server;
-server=HttpServer::getInstance();
+HttpServer server(arg[1]);
 thread *t;
 server.listenMode();
 while(1)
